@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knights Escape Game</title>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <style>
+        #myBoard {
+            width: 400px;
+            margin: auto;
+        }
+        #status {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        #puzzleSelect {
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .highlight-win {
+            box-shadow: inset 0 0 1px 1px lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <select id="puzzleSelect" onchange="selectPuzzle()">
+        <!-- Options will be populated dynamically -->
+    </select>
+
+    <div id="myBoard"></div>
+
+    <div id="status"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script src="puzzles.js"></script>
+	<script type="module" src="chess.js"></script>
+	<script type="module" src="game.js"></script>
+    <script>
+        // Function to populate the puzzle select dropdown
+        function populatePuzzleSelect() {
+            const selectElement = document.getElementById('puzzleSelect');
+            puzzles.forEach((puzzle, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = puzzle.name;
+                selectElement.appendChild(option);
+            });
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            populatePuzzleSelect();
+            // game.js now handles initializing the first puzzle
+        });
+    </script>
+</body>
+</html>
