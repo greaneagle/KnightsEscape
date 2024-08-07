@@ -24,17 +24,18 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-window.Chess = (function() {
+
 	
 export const WHITE = 'w'
 export const BLACK = 'b'
-
 export const PAWN = 'p'
 export const KNIGHT = 'n'
 export const BISHOP = 'b'
 export const ROOK = 'r'
 export const QUEEN = 'q'
 export const KING = 'k'
+
+export class Chess {
 
 export type Color = 'w' | 'b'
 export type PieceSymbol = 'p' | 'n' | 'b' | 'r' | 'q' | 'k'
@@ -2441,4 +2442,6 @@ perft(depth: number) {
 }
 
   return Chess;
-})();
+  
+
+}
