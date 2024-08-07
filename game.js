@@ -16,7 +16,7 @@ let customGame = {
     winSquares: []
 };
 
-function initializeGame(puzzleIndex) {
+export function initializeGame(puzzleIndex) {
     log(`Initializing game with puzzle index ${puzzleIndex}`);
     game = new Chess(); // Initialize the game here
     game.clear();
@@ -188,8 +188,7 @@ let config = {
 // Initialize the board
 board = Chessboard('myBoard', config);
 
-// Add puzzle selection functionality
-function selectPuzzle() {
+export function selectPuzzle() {
     const puzzleIndex = document.getElementById('puzzleSelect').value;
     log(`Puzzle selected: ${puzzleIndex}`);
     initializeGame(parseInt(puzzleIndex));
