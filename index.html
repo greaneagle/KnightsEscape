@@ -3,64 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knights Escape Game</title>
-    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <title>Knight Move Puzzle</title>
     <style>
-        #myBoard {
-            width: 400px;
-            margin: auto;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
         }
-        #status {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 18px;
+        #controls, #moveCount, #status {
+            margin: 10px 0;
         }
-        #puzzleSelect {
-            display: block;
-            margin: 20px auto;
+        canvas {
+            border: 1px solid black;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
             font-size: 16px;
-        }
-        .highlight-win {
-            box-shadow: inset 0 0 1px 1px lightgreen;
         }
     </style>
 </head>
 <body>
-    <select id="puzzleSelect" onchange="selectPuzzle()">
-        <!-- Options will be populated dynamically -->
-    </select>
-
-    <div id="myBoard"></div>
-
+    <div id="controls">
+        Select Puzzle:
+        <select id="puzzleSelect"></select>
+    </div>
+    <canvas id="gameBoard" width="400" height="400"></canvas>
+    <div id="moveCount"></div>
     <div id="status"></div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
-    <script src="puzzles.js"></script>
-    <script type="module" src="chess.js"></script>
-    <script type="module" src="game.js"></script>
-    <script type="module">
-        import { initializeGame, selectPuzzle } from './game.js';
-
-        // Function to populate the puzzle select dropdown
-        function populatePuzzleSelect() {
-            const selectElement = document.getElementById('puzzleSelect');
-            puzzles.forEach((puzzle, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = puzzle.name;
-                selectElement.appendChild(option);
-            });
-        }
-
-        // Call the function when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            populatePuzzleSelect();
-            initializeGame(0); // Initialize with the first puzzle
-        });
-
-        // Make sure selectPuzzle is globally accessible
-        window.selectPuzzle = selectPuzzle;
-    </script>
+    <script src="knight-move-puzzle-simple.js"></script>
 </body>
 </html>
