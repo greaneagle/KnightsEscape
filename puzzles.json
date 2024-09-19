@@ -1,0 +1,566 @@
+[
+  {
+    "name": "Classic 8x8",
+    "boardSize": {"x": 8, "y": 8},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 7, "y": 7}],
+    "unavailableSquares": []
+  },
+  {
+    "name": "L-Shaped Challenge",
+    "boardSize": {"x": 6, "y": 6},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 5, "y": 5}],
+    "unavailableSquares": [
+      {"x": 2, "y": 2}, {"x": 2, "y": 3}, {"x": 2, "y": 4}, {"x": 2, "y": 5},
+      {"x": 3, "y": 2}, {"x": 4, "y": 2}, {"x": 5, "y": 2}
+    ]
+  },
+  {
+    "name": "Tiny Tactics",
+    "boardSize": {"x": 4, "y": 4},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 3, "y": 3}],
+    "unavailableSquares": [{"x": 1, "y": 1}, {"x": 2, "y": 2}]
+  },
+  {
+    "name": "Rectangular Rumble",
+    "boardSize": {"x": 10, "y": 6},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 9, "y": 5}],
+    "unavailableSquares": [
+      {"x": 3, "y": 2}, {"x": 3, "y": 3}, {"x": 6, "y": 2}, {"x": 6, "y": 3}
+    ]
+  },
+  {
+    "name": "Multi-Goal Madness",
+    "boardSize": {"x": 7, "y": 7},
+    "knightStart": {"x": 3, "y": 3},
+    "winSquares": [{"x": 0, "y": 0}, {"x": 0, "y": 6}, {"x": 6, "y": 0}, {"x": 6, "y": 6}],
+    "unavailableSquares": []
+  },
+  {
+    "name": "Hourglass Hustle",
+    "boardSize": {"x": 5, "y": 7},
+    "knightStart": {"x": 2, "y": 0},
+    "winSquares": [{"x": 2, "y": 6}],
+    "unavailableSquares": [
+      {"x": 0, "y": 3}, {"x": 1, "y": 3}, {"x": 3, "y": 3}, {"x": 4, "y": 3}
+    ]
+  },
+  {
+    "name": "Diagonal Dash",
+    "boardSize": {"x": 8, "y": 8},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 7, "y": 7}],
+    "unavailableSquares": [
+      {"x": 1, "y": 1}, {"x": 2, "y": 2}, {"x": 3, "y": 3},
+      {"x": 4, "y": 4}, {"x": 5, "y": 5}, {"x": 6, "y": 6}
+    ]
+  },
+  {
+    "name": "Spiral Struggle",
+    "boardSize": {"x": 9, "y": 9},
+    "knightStart": {"x": 4, "y": 4},
+    "winSquares": [{"x": 0, "y": 0}],
+    "unavailableSquares": [
+      {"x": 1, "y": 4}, {"x": 2, "y": 4}, {"x": 3, "y": 4},
+      {"x": 5, "y": 4}, {"x": 6, "y": 4}, {"x": 7, "y": 4},
+      {"x": 4, "y": 1}, {"x": 4, "y": 2}, {"x": 4, "y": 3},
+      {"x": 4, "y": 5}, {"x": 4, "y": 6}, {"x": 4, "y": 7}
+    ]
+  },
+  {
+    "name": "Checkerboard Challenge",
+    "boardSize": {"x": 8, "y": 8},
+    "knightStart": {"x": 0, "y": 0},
+    "winSquares": [{"x": 7, "y": 7}],
+    "unavailableSquares": [
+      {"x": 1, "y": 1}, {"x": 1, "y": 3}, {"x": 1, "y": 5}, {"x": 1, "y": 7},
+      {"x": 3, "y": 1}, {"x": 3, "y": 3}, {"x": 3, "y": 5}, {"x": 3, "y": 7},
+      {"x": 5, "y": 1}, {"x": 5, "y": 3}, {"x": 5, "y": 5}, {"x": 5, "y": 7},
+      {"x": 7, "y": 1}, {"x": 7, "y": 3}, {"x": 7, "y": 5}
+    ]
+  },
+  {
+    "name": "Castle Siege",
+    "boardSize": {"x": 9, "y": 9},
+    "knightStart": {"x": 4, "y": 0},
+    "winSquares": [{"x": 4, "y": 4}],
+    "unavailableSquares": [
+      {"x": 3, "y": 3}, {"x": 3, "y": 4}, {"x": 3, "y": 5},
+      {"x": 4, "y": 3}, {"x": 4, "y": 5},
+      {"x": 5, "y": 3}, {"x": 5, "y": 4}, {"x": 5, "y": 5}
+    ]
+  },
+    {
+      "name": "Mirror Maze",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 7},
+      "winSquares": [{"x": 7, "y": 0}],
+      "unavailableSquares": []
+    },
+    {
+      "name": "Cornered",
+      "boardSize": {"x": 5, "y": 5},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 4, "y": 4}],
+      "unavailableSquares": [
+        {"x": 2, "y": 2}
+      ]
+    },
+    {
+      "name": "Crossroads",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 3, "y": 3},
+      "winSquares": [{"x": 6, "y": 3}],
+      "unavailableSquares": [
+        {"x": 2, "y": 3}, {"x": 4, "y": 3}, {"x": 3, "y": 2}, {"x": 3, "y": 4}
+      ]
+    },
+    {
+      "name": "Island Escape",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 2, "y": 2},
+      "winSquares": [{"x": 5, "y": 5}],
+      "unavailableSquares": [
+        {"x": 1, "y": 2}, {"x": 3, "y": 2}, {"x": 2, "y": 1}, {"x": 2, "y": 3}
+      ]
+    },
+    {
+      "name": "Zigzag Zone",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 7, "y": 7}],
+      "unavailableSquares": [
+        {"x": 1, "y": 0}, {"x": 2, "y": 1}, {"x": 3, "y": 2}, {"x": 4, "y": 3},
+        {"x": 5, "y": 4}, {"x": 6, "y": 5}, {"x": 7, "y": 6}
+      ]
+    },
+    {
+      "name": "Barrier Blast",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 0, "y": 6},
+      "winSquares": [{"x": 6, "y": 0}],
+      "unavailableSquares": [
+        {"x": 3, "y": 0}, {"x": 3, "y": 1}, {"x": 3, "y": 2}, {"x": 3, "y": 3},
+        {"x": 3, "y": 4}, {"x": 3, "y": 5}, {"x": 3, "y": 6}
+      ]
+    },
+    {
+      "name": "Central Circle",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 4, "y": 0},
+      "winSquares": [{"x": 4, "y": 8}],
+      "unavailableSquares": [
+        {"x": 2, "y": 4}, {"x": 3, "y": 4}, {"x": 5, "y": 4}, {"x": 6, "y": 4},
+        {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 5}, {"x": 4, "y": 6}
+      ]
+    },
+    {
+      "name": "Double Trouble",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 7, "y": 7}, {"x": 0, "y": 7}],
+      "unavailableSquares": [
+        {"x": 3, "y": 3}, {"x": 4, "y": 4}
+      ]
+    },
+    {
+      "name": "The Gauntlet",
+      "boardSize": {"x": 10, "y": 5},
+      "knightStart": {"x": 0, "y": 2},
+      "winSquares": [{"x": 9, "y": 2}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 1, "y": 3}, {"x": 2, "y": 1}, {"x": 2, "y": 3},
+        {"x": 3, "y": 1}, {"x": 3, "y": 3}, {"x": 4, "y": 1}, {"x": 4, "y": 3},
+        {"x": 5, "y": 1}, {"x": 5, "y": 3}, {"x": 6, "y": 1}, {"x": 6, "y": 3},
+        {"x": 7, "y": 1}, {"x": 7, "y": 3}, {"x": 8, "y": 1}, {"x": 8, "y": 3}
+      ]
+    },
+    {
+      "name": "Knight's Tour",
+      "boardSize": {"x": 5, "y": 5},
+      "knightStart": {"x": 2, "y": 2},
+      "winSquares": [{"x": 0, "y": 0}, {"x": 0, "y": 4}, {"x": 4, "y": 0}, {"x": 4, "y": 4}],
+      "unavailableSquares": []
+    },
+    {
+      "name": "Labyrinth",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 5, "y": 5}],
+      "unavailableSquares": [
+        {"x": 1, "y": 0}, {"x": 1, "y": 1}, {"x": 1, "y": 2}, {"x": 1, "y": 3},
+        {"x": 1, "y": 4}, {"x": 2, "y": 4}, {"x": 3, "y": 4}, {"x": 4, "y": 4},
+        {"x": 4, "y": 3}, {"x": 4, "y": 2}, {"x": 4, "y": 1}
+      ]
+    },
+    {
+      "name": "Edge Runner",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 7},
+      "winSquares": [{"x": 7, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 6}, {"x": 2, "y": 5}, {"x": 3, "y": 4}, {"x": 4, "y": 3},
+        {"x": 5, "y": 2}, {"x": 6, "y": 1}
+      ]
+    },
+    {
+      "name": "Maze Runner",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 0, "y": 3},
+      "winSquares": [{"x": 6, "y": 3}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 1, "y": 2}, {"x": 1, "y": 4}, {"x": 1, "y": 5},
+        {"x": 2, "y": 5}, {"x": 3, "y": 5}, {"x": 4, "y": 5}, {"x": 5, "y": 5},
+        {"x": 5, "y": 1}, {"x": 5, "y": 2}, {"x": 5, "y": 3}, {"x": 5, "y": 4}
+      ]
+    },
+    {
+      "name": "Twin Towers",
+      "boardSize": {"x": 5, "y": 9},
+      "knightStart": {"x": 2, "y": 0},
+      "winSquares": [{"x": 2, "y": 8}],
+      "unavailableSquares": [
+        {"x": 1, "y": 4}, {"x": 3, "y": 4}
+      ]
+    },
+    {
+      "name": "Blockade",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 5, "y": 0},
+      "winSquares": [{"x": 0, "y": 5}],
+      "unavailableSquares": [
+        {"x": 2, "y": 1}, {"x": 2, "y": 2}, {"x": 2, "y": 3}, {"x": 2, "y": 4}
+      ]
+    },
+    {
+      "name": "Diamond Quest",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 4, "y": 4},
+      "winSquares": [{"x": 0, "y": 4}, {"x": 8, "y": 4}, {"x": 4, "y": 0}, {"x": 4, "y": 8}],
+      "unavailableSquares": [
+        {"x": 3, "y": 3}, {"x": 5, "y": 3}, {"x": 3, "y": 5}, {"x": 5, "y": 5}
+      ]
+    },
+    {
+      "name": "Spiral Staircase",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 6, "y": 6}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 1, "y": 2}, {"x": 1, "y": 3}, {"x": 1, "y": 4}, {"x": 1, "y": 5},
+        {"x": 2, "y": 5}, {"x": 3, "y": 5}, {"x": 4, "y": 5}, {"x": 5, "y": 5},
+        {"x": 5, "y": 4}, {"x": 5, "y": 3}, {"x": 5, "y": 2}, {"x": 5, "y": 1}
+      ]
+    },
+    {
+      "name": "Obstacle Course",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 7, "y": 7},
+      "winSquares": [{"x": 0, "y": 0}],
+      "unavailableSquares": [
+        {"x": 6, "y": 6}, {"x": 5, "y": 5}, {"x": 4, "y": 4}, {"x": 3, "y": 3},
+        {"x": 2, "y": 2}, {"x": 1, "y": 1}
+      ]
+    },
+    {
+      "name": "Inner Sanctum",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 3, "y": 3},
+      "winSquares": [{"x": 3, "y": 3}],
+      "unavailableSquares": [
+        {"x": 2, "y": 2}, {"x": 2, "y": 3}, {"x": 2, "y": 4},
+        {"x": 3, "y": 2}, {"x": 3, "y": 4},
+        {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 4}
+      ]
+    },
+    {
+      "name": "Around the Bend",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 7, "y": 7}],
+      "unavailableSquares": [
+        {"x": 1, "y": 0}, {"x": 2, "y": 0}, {"x": 3, "y": 0}, {"x": 4, "y": 0}, {"x": 5, "y": 0}, {"x": 6, "y": 0},
+        {"x": 6, "y": 1}, {"x": 6, "y": 2}, {"x": 6, "y": 3}, {"x": 6, "y": 4}, {"x": 6, "y": 5}, {"x": 6, "y": 6}
+      ]
+    },
+    {
+      "name": "Tightrope",
+      "boardSize": {"x": 5, "y": 9},
+      "knightStart": {"x": 2, "y": 8},
+      "winSquares": [{"x": 2, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 4}, {"x": 3, "y": 4}
+      ]
+    },
+    {
+      "name": "Winding Path",
+      "boardSize": {"x": 10, "y": 10},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 9, "y": 9}],
+      "unavailableSquares": [
+        {"x": 1, "y": 0}, {"x": 2, "y": 0}, {"x": 2, "y": 1}, {"x": 2, "y": 2}, {"x": 1, "y": 2},
+        {"x": 0, "y": 2}, {"x": 0, "y": 3}, {"x": 0, "y": 4}, {"x": 1, "y": 4}, {"x": 2, "y": 4},
+        {"x": 3, "y": 4}, {"x": 4, "y": 4}, {"x": 4, "y": 3}, {"x": 4, "y": 2}, {"x": 4, "y": 1},
+        {"x": 4, "y": 0}, {"x": 5, "y": 0}, {"x": 6, "y": 0}, {"x": 6, "y": 1}, {"x": 6, "y": 2},
+        {"x": 6, "y": 3}, {"x": 6, "y": 4}, {"x": 6, "y": 5}, {"x": 5, "y": 5}, {"x": 4, "y": 5},
+        {"x": 3, "y": 5}, {"x": 2, "y": 5}, {"x": 1, "y": 5}, {"x": 0, "y": 5}
+      ]
+    },
+    {
+      "name": "Stepping Stones",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 5, "y": 5}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 3, "y": 1}, {"x": 5, "y": 1},
+        {"x": 1, "y": 3}, {"x": 3, "y": 3}, {"x": 5, "y": 3},
+        {"x": 1, "y": 5}, {"x": 3, "y": 5}
+      ]
+    },
+    {
+      "name": "Middle Ground",
+      "boardSize": {"x": 5, "y": 5},
+      "knightStart": {"x": 0, "y": 2},
+      "winSquares": [{"x": 4, "y": 2}],
+      "unavailableSquares": [
+        {"x": 2, "y": 0}, {"x": 2, "y": 1}, {"x": 2, "y": 3}, {"x": 2, "y": 4}
+      ]
+    },
+    {
+      "name": "Barrier Breaker",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 7, "y": 0},
+      "winSquares": [{"x": 0, "y": 7}],
+      "unavailableSquares": [
+        {"x": 3, "y": 0}, {"x": 3, "y": 1}, {"x": 3, "y": 2}, {"x": 3, "y": 3}, {"x": 3, "y": 4}, {"x": 3, "y": 5}, {"x": 3, "y": 6}, {"x": 3, "y": 7}
+      ]
+    },
+    {
+      "name": "Tunnel Vision",
+      "boardSize": {"x": 5, "y": 7},
+      "knightStart": {"x": 2, "y": 6},
+      "winSquares": [{"x": 2, "y": 0}],
+      "unavailableSquares": [
+        {"x": 0, "y": 3}, {"x": 1, "y": 3}, {"x": 3, "y": 3}, {"x": 4, "y": 3}
+      ]
+    },
+    {
+      "name": "Knight's Journey",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 7, "y": 7}],
+      "unavailableSquares": []
+    },
+    {
+      "name": "The Fortress",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 0, "y": 4},
+      "winSquares": [{"x": 8, "y": 4}],
+      "unavailableSquares": [
+        {"x": 4, "y": 0}, {"x": 4, "y": 1}, {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 5}, {"x": 4, "y": 6}, {"x": 4, "y": 7}, {"x": 4, "y": 8}
+      ]
+    },
+    {
+      "name": "Maze Craze",
+      "boardSize": {"x": 10, "y": 10},
+      "knightStart": {"x": 9, "y": 9},
+      "winSquares": [{"x": 0, "y": 0}],
+      "unavailableSquares": [
+        {"x": 8, "y": 9}, {"x": 7, "y": 8}, {"x": 6, "y": 7}, {"x": 5, "y": 6}, {"x": 4, "y": 5}, {"x": 3, "y": 4}, {"x": 2, "y": 3}, {"x": 1, "y": 2}
+      ]
+    },
+    {
+      "name": "The Cross",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 4, "y": 0},
+      "winSquares": [{"x": 4, "y": 8}],
+      "unavailableSquares": [
+        {"x": 0, "y": 4}, {"x": 1, "y": 4}, {"x": 2, "y": 4}, {"x": 3, "y": 4}, {"x": 5, "y": 4}, {"x": 6, "y": 4}, {"x": 7, "y": 4}, {"x": 8, "y": 4}
+      ]
+    },
+    {
+      "name": "Pathfinder",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 0, "y": 5},
+      "winSquares": [{"x": 5, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 4}, {"x": 2, "y": 3}, {"x": 3, "y": 2}, {"x": 4, "y": 1}
+      ]
+    },
+    {
+      "name": "Square Dance",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 3, "y": 3},
+      "winSquares": [{"x": 4, "y": 4}],
+      "unavailableSquares": [
+        {"x": 2, "y": 2}, {"x": 2, "y": 5}, {"x": 5, "y": 2}, {"x": 5, "y": 5}
+      ]
+    },
+    {
+      "name": "Snail Trail",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 6, "y": 6},
+      "winSquares": [{"x": 0, "y": 0}],
+      "unavailableSquares": [
+        {"x": 5, "y": 6}, {"x": 4, "y": 6}, {"x": 3, "y": 6}, {"x": 2, "y": 6}, {"x": 1, "y": 6},
+        {"x": 0, "y": 6}, {"x": 0, "y": 5}, {"x": 0, "y": 4}, {"x": 0, "y": 3}, {"x": 0, "y": 2},
+        {"x": 0, "y": 1}
+      ]
+    },
+    {
+      "name": "Enclosed",
+      "boardSize": {"x": 5, "y": 5},
+      "knightStart": {"x": 2, "y": 2},
+      "winSquares": [{"x": 2, "y": 2}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 1, "y": 2}, {"x": 1, "y": 3},
+        {"x": 2, "y": 1}, {"x": 2, "y": 3},
+        {"x": 3, "y": 1}, {"x": 3, "y": 2}, {"x": 3, "y": 3}
+      ]
+    },
+    {
+      "name": "Hidden Path",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 5, "y": 5},
+      "winSquares": [{"x": 0, "y": 0}],
+      "unavailableSquares": [
+        {"x": 4, "y": 5}, {"x": 3, "y": 4}, {"x": 2, "y": 3}, {"x": 1, "y": 2}, {"x": 0, "y": 1}
+      ]
+    },
+    {
+      "name": "Central Block",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 6, "y": 6}],
+      "unavailableSquares": [
+        {"x": 2, "y": 2}, {"x": 2, "y": 3}, {"x": 2, "y": 4},
+        {"x": 3, "y": 2}, {"x": 3, "y": 3}, {"x": 3, "y": 4},
+        {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 4}
+      ]
+    },
+    {
+      "name": "Diagonal Divide",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 7, "y": 7}],
+      "unavailableSquares": [
+        {"x": 0, "y": 1}, {"x": 1, "y": 2}, {"x": 2, "y": 3}, {"x": 3, "y": 4}, {"x": 4, "y": 5}, {"x": 5, "y": 6}, {"x": 6, "y": 7}
+      ]
+    },
+    {
+      "name": "Outer Ring",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 8, "y": 8}],
+      "unavailableSquares": [
+        {"x": 1, "y": 1}, {"x": 1, "y": 2}, {"x": 1, "y": 3}, {"x": 1, "y": 4}, {"x": 1, "y": 5}, {"x": 1, "y": 6}, {"x": 1, "y": 7},
+        {"x": 2, "y": 7}, {"x": 3, "y": 7}, {"x": 4, "y": 7}, {"x": 5, "y": 7}, {"x": 6, "y": 7}, {"x": 7, "y": 7},
+        {"x": 7, "y": 6}, {"x": 7, "y": 5}, {"x": 7, "y": 4}, {"x": 7, "y": 3}, {"x": 7, "y": 2}, {"x": 7, "y": 1},
+        {"x": 6, "y": 1}, {"x": 5, "y": 1}, {"x": 4, "y": 1}, {"x": 3, "y": 1}, {"x": 2, "y": 1}
+      ]
+    },
+    {
+      "name": "Zigzag Path",
+      "boardSize": {"x": 5, "y": 9},
+      "knightStart": {"x": 0, "y": 8},
+      "winSquares": [{"x": 4, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 8}, {"x": 1, "y": 6}, {"x": 1, "y": 4}, {"x": 1, "y": 2}, {"x": 1, "y": 0},
+        {"x": 3, "y": 7}, {"x": 3, "y": 5}, {"x": 3, "y": 3}, {"x": 3, "y": 1}
+      ]
+    },
+    {
+      "name": "The Divide",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 3},
+      "winSquares": [{"x": 7, "y": 4}],
+      "unavailableSquares": [
+        {"x": 4, "y": 0}, {"x": 4, "y": 1}, {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 4}, {"x": 4, "y": 5}, {"x": 4, "y": 6}, {"x": 4, "y": 7}
+      ]
+    },
+    {
+      "name": "Knight's Cross",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 4, "y": 4},
+      "winSquares": [{"x": 4, "y": 0}, {"x": 0, "y": 4}, {"x": 8, "y": 4}, {"x": 4, "y": 8}],
+      "unavailableSquares": []
+    },
+    {
+      "name": "Opposite Corners",
+      "boardSize": {"x": 10, "y": 10},
+      "knightStart": {"x": 0, "y": 0},
+      "winSquares": [{"x": 9, "y": 9}],
+      "unavailableSquares": []
+    },
+    {
+      "name": "Hidden Corners",
+      "boardSize": {"x": 10, "y": 10},
+      "knightStart": {"x": 0, "y": 9},
+      "winSquares": [{"x": 9, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 8}, {"x": 2, "y": 7}, {"x": 3, "y": 6}, {"x": 4, "y": 5}, {"x": 5, "y": 4}, {"x": 6, "y": 3}, {"x": 7, "y": 2}, {"x": 8, "y": 1}
+      ]
+    },
+    {
+      "name": "Caged In",
+      "boardSize": {"x": 5, "y": 5},
+      "knightStart": {"x": 2, "y": 2},
+      "winSquares": [{"x": 2, "y": 2}],
+      "unavailableSquares": [
+        {"x": 1, "y": 2}, {"x": 3, "y": 2}, {"x": 2, "y": 1}, {"x": 2, "y": 3}
+      ]
+    },
+    {
+      "name": "Circular Path",
+      "boardSize": {"x": 7, "y": 7},
+      "knightStart": {"x": 3, "y": 3},
+      "winSquares": [{"x": 3, "y": 3}],
+      "unavailableSquares": [
+        {"x": 2, "y": 2}, {"x": 2, "y": 3}, {"x": 2, "y": 4},
+        {"x": 3, "y": 2}, {"x": 3, "y": 4},
+        {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 4},
+        {"x": 1, "y": 3}, {"x": 3, "y": 1}, {"x": 5, "y": 3}, {"x": 3, "y": 5}
+      ]
+    },
+    {
+      "name": "Tight Corners",
+      "boardSize": {"x": 6, "y": 6},
+      "knightStart": {"x": 0, "y": 5},
+      "winSquares": [{"x": 5, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 5}, {"x": 2, "y": 5}, {"x": 3, "y": 5}, {"x": 4, "y": 5}, {"x": 5, "y": 5},
+        {"x": 0, "y": 4}, {"x": 0, "y": 3}, {"x": 0, "y": 2}, {"x": 0, "y": 1}
+      ]
+    },
+    {
+      "name": "Center Blockade",
+      "boardSize": {"x": 9, "y": 9},
+      "knightStart": {"x": 0, "y": 8},
+      "winSquares": [{"x": 8, "y": 0}],
+      "unavailableSquares": [
+        {"x": 4, "y": 2}, {"x": 4, "y": 3}, {"x": 4, "y": 4}, {"x": 4, "y": 5}, {"x": 4, "y": 6}
+      ]
+    },
+    {
+      "name": "Diagonal Block",
+      "boardSize": {"x": 8, "y": 8},
+      "knightStart": {"x": 0, "y": 7},
+      "winSquares": [{"x": 7, "y": 0}],
+      "unavailableSquares": [
+        {"x": 1, "y": 6}, {"x": 2, "y": 5}, {"x": 3, "y": 4}, {"x": 4, "y": 3}, {"x": 5, "y": 2}, {"x": 6, "y": 1}
+      ]
+    },
+    {
+      "name": "Maze Escape",
+      "boardSize": {"x": 10, "y": 10},
+      "knightStart": {"x": 5, "y": 5},
+      "winSquares": [{"x": 0, "y": 0}],
+      "unavailableSquares": [
+        {"x": 5, "y": 4}, {"x": 4, "y": 4}, {"x": 3, "y": 4}, {"x": 2, "y": 4}, {"x": 1, "y": 4}, {"x": 0, "y": 4},
+        {"x": 5, "y": 6}, {"x": 4, "y": 6}, {"x": 3, "y": 6}, {"x": 2, "y": 6}, {"x": 1, "y": 6}, {"x": 0, "y": 6}
+      ]
+    }
+]
