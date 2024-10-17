@@ -238,7 +238,12 @@ function tryMoveKnight(x, y) {
 	            visitedRequiredSquares.push({x, y});
 	        }
 	    });
-
+	if (true) {
+            console.log(`Move ${moveCount}:`);
+            console.log(`Knight's Position: (${knightPosition.x}, ${knightPosition.y})`);
+            console.log('Required Squares:', currentPuzzle.requiredSquares.map(sq => `(${sq.x}, ${sq.y})`));
+            console.log('Visited Required Squares:', visitedRequiredSquares.map(sq => `(${sq.x}, ${sq.y})`));
+        }
         updateBoard();
         updateStatus();
         checkWinCondition();
