@@ -62,11 +62,12 @@ function addEventListeners() {
 
 function loadPuzzle(puzzle) {
     currentPuzzle = puzzle;
+    currentPuzzle.requiredSquares = currentPuzzle.requiredSquares || [];
     knightPosition = {...puzzle.knightStart};
     moveCount = 0;
     startTime = null;
     isPuzzleSolved = false;
-    visitedRequiredSquares = []; // Reset visited required squares
+    visitedRequiredSquares = [];
     updateBoard();
     updateStatus();
 }
@@ -122,6 +123,12 @@ function updateBoard(dragX = null, dragY = null) {
     ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
     currentPuzzle.winSquares.forEach(square => {
         ctx.fillRect(square.x * tileSize, square.y * tileSize, tileSize, tileSize);
+    });
+
+    //Draw Required Squares 
+    ctx.fillStyle = 'rgba(155, 155, 0, 0.5)';
+    currentPuzzle.requiredSquares.forEach(square => {
+    ctx.fillRect(square.x * tileSize, square.y * tileSize, tileSize, tileSize);
     });
 }
 
@@ -225,12 +232,12 @@ function tryMoveKnight(x, y) {
         knightPosition = {x, y};
         moveCount++;
 
-        // Check if the knight landed on a required square
-        currentPuzzle.requiredSquares.forEach(square => {
-            if (square.x === x && square.y === y && !visitedRequiredSquares.some(sq => sq.x === x && sq.y === y)) {
-                visitedRequiredSquares.push({x, y});
-            }
-        });
+	        // Check if the knight landed on a required square
+	    currentPuzzle.requiredSquares.forEach(square => {
+	        if (square.x === x && square.y === y && !visitedRequiredSquares.some(sq => sq.x === x && sq.y === y)) {
+	            visitedRequiredSquares.push({x, y});
+	        }
+	    });
 
         updateBoard();
         updateStatus();
