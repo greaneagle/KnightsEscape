@@ -22,7 +22,7 @@
     "knightStart": {"x": 0, "y": 0},
     "winSquares": [{"x": 3, "y": 3}],
     "unavailableSquares": [{"x": 1, "y": 1}, {"x": 2, "y": 2}],
-    "requiredSquares": [{"x": 4, "y": 4}, {"x": 2, "y": 2}]
+    "requiredSquares": [{"x": 3, "y": 1}, {"x": 1, "y": 3}]
   },
   {
     "name": "Rectangular Rumble",
