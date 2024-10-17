@@ -10,6 +10,7 @@ let dragOffset = {x: 0, y: 0};
 let isPuzzleSolved = false;
 let currentHoverSquare = null;
 let puzzles = [];
+let visitedRequiredSquares = [];
 
 // Fetch puzzles from the JSON file
 function fetchPuzzles() {
@@ -65,6 +66,7 @@ function loadPuzzle(puzzle) {
     moveCount = 0;
     startTime = null;
     isPuzzleSolved = false;
+    visitedRequiredSquares = []; // Reset visited required squares
     updateBoard();
     updateStatus();
 }
@@ -129,38 +131,33 @@ function updateBoard(dragX = null, dragY = null) {
     canvas.width = currentPuzzle.boardSize.x * tileSize;
     canvas.height = currentPuzzle.boardSize.y * tileSize;
 
-    // Draw the board and handle unavailable squares
+    // Draw the board and handle unavailable and required squares
     for (let x = 0; x < currentPuzzle.boardSize.x; x++) {
         for (let y = 0; y < currentPuzzle.boardSize.y; y++) {
-            if (currentPuzzle.unavailableSquares.some(sq => sq.x === x && sq.y === y)) {
+            // Determine the square type
+            let isUnavailable = currentPuzzle.unavailableSquares.some(sq => sq.x === x && sq.y === y);
+            let isRequired = currentPuzzle.requiredSquares.some(sq => sq.x === x && sq.y === y);
+            let isVisitedRequired = visitedRequiredSquares.some(sq => sq.x === x && sq.y === y);
+
+            if (isUnavailable) {
                 ctx.fillStyle = '#808080'; // Unavailable squares
+            } else if (isRequired && !isVisitedRequired) {
+                ctx.fillStyle = '#ADD8E6'; // Required squares (light blue)
+            } else if (isRequired && isVisitedRequired) {
+                ctx.fillStyle = '#87CEEB'; // Visited required squares (darker blue)
             } else {
                 ctx.fillStyle = (x + y) % 2 === 0 ? '#ffffff' : '#c0c0c0';
             }
+
             ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
         }
     }
-   // Highlight the knight's current square while dragging
-    if (isDragging) {
-        ctx.fillStyle = 'rgba(0, 0, 255, 0.3)';
-        ctx.fillRect(knightPosition.x * tileSize, knightPosition.y * tileSize, tileSize, tileSize);
 
-		// Highlight valid move squares if dragging
-		if (isDragging) {
-			for (let x = 0; x < currentPuzzle.boardSize.x; x++) {
-				for (let y = 0; y < currentPuzzle.boardSize.y; y++) {
-					if (!currentPuzzle.unavailableSquares.some(sq => sq.x === x && sq.y === y) && isValidKnightMove(x, y)) {
-						if (currentHoverSquare && currentHoverSquare.x === x && currentHoverSquare.y === y) {
-							ctx.fillStyle = 'rgba(0, 255, 0, 0.2)'; // Highlight with a green overlay
-						} else {
-							ctx.fillStyle = 'rgba(0, 255, 0, 0.0)'; // Slight highlight for valid move squares
-						}
-						ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
-					}
-				}
-			}
-		}
-	}
+    // Draw win squares
+    ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
+    currentPuzzle.winSquares.forEach(square => {
+        ctx.fillRect(square.x * tileSize, square.y * tileSize, tileSize, tileSize);
+    });
 
     // Draw the knight
     ctx.fillStyle = '#000000';
@@ -170,14 +167,7 @@ function updateBoard(dragX = null, dragY = null) {
     const knightX = dragX !== null ? dragX : (knightPosition.x + 0.5) * tileSize;
     const knightY = dragY !== null ? dragY : (knightPosition.y + 0.5) * tileSize;
     ctx.fillText('♞', knightX, knightY);
-
-    // Highlight win squares
-    ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
-    currentPuzzle.winSquares.forEach(square => {
-        ctx.fillRect(square.x * tileSize, square.y * tileSize, tileSize, tileSize);
-    });
 }
-
 
 
 
@@ -234,6 +224,14 @@ function tryMoveKnight(x, y) {
     if (isValidKnightMove(x, y)) {
         knightPosition = {x, y};
         moveCount++;
+
+        // Check if the knight landed on a required square
+        currentPuzzle.requiredSquares.forEach(square => {
+            if (square.x === x && square.y === y && !visitedRequiredSquares.some(sq => sq.x === x && sq.y === y)) {
+                visitedRequiredSquares.push({x, y});
+            }
+        });
+
         updateBoard();
         updateStatus();
         checkWinCondition();
@@ -252,12 +250,27 @@ function isValidKnightMove(x, y) {
 }
 
 function checkWinCondition() {
-    if (currentPuzzle.winSquares.some(square => square.x === knightPosition.x && square.y === knightPosition.y)) {
+    // Check if all required squares have been visited
+    const allRequiredVisited = currentPuzzle.requiredSquares.every(reqSquare =>
+        visitedRequiredSquares.some(visited => visited.x === reqSquare.x && visited.y === reqSquare.y)
+    );
+
+    // Check if the knight is on a win square
+    const onWinSquare = currentPuzzle.winSquares.some(square =>
+        square.x === knightPosition.x && square.y === knightPosition.y
+    );
+
+    if (allRequiredVisited && onWinSquare) {
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / 1000; // Convert to seconds
         const statusMessage = `Congratulations! You solved the puzzle in ${moveCount} moves and ${timeTaken.toFixed(2)} seconds.`;
         document.getElementById('status').textContent = statusMessage;
         isPuzzleSolved = true;
+    } else if (onWinSquare && !allRequiredVisited) {
+        // Player landed on the finish square but hasn't visited all required squares
+        document.getElementById('status').textContent = 'You need to visit all required squares before finishing!';
+    } else {
+        document.getElementById('status').textContent = '';
     }
 }
 
